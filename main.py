@@ -76,8 +76,16 @@ dog1.bark()
 
 #Create an object of tasks     in one task i have a name      created date    an user id     a duration   an object of user   and the user have a name and an id     mark date 
 
+class User:
+    def __init__(self, name, id):
+        self.name=name
+        self.id=id
+    def display_user_info(self):
+        print(f"this is user name {self.name}, and this is his id {self.id}")
+info_user=User("Bread", 17845)
+info_user.display_user_info()
 
-class Tasks:
+class Task:
     def __init__(self, name, created_date, id, duration, user_object, mark_date):
         self.name = name
         self.created_date = created_date
@@ -89,7 +97,7 @@ class Tasks:
     def display_data(self):
         print(f"Data: {self.name}, {self.created_date}, {self.id}, {self.duration}, {self.user_object}, {self.mark_date}")
 
-info_task = Tasks("Job", "05/01/2024", 12604, "3 months", "Clone", "Global")
+info_task = Task("Job", "05/01/2024", 12604, "3 months", "Clone", "Global")
 info_task.display_data()
 
 
